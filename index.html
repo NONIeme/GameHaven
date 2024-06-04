@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHaven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Магазин Ігор GameHaven</a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home" data-target="home">Головна</a></li>
+                <li><a href="#shop" data-target="shop">Магазин</a></li>
+                <li><a href="#about" data-target="about">Про нас</a></li>
+                <li><a href="#contact" data-target="contact">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="search-cart">
+            <input type="text" id="search-bar" placeholder="Пошук ігор...">
+            <button id="search-button">Пошук</button>
+            <a href="#" class="cart-icon" id="cart-icon"><i class="fas fa-shopping-cart"></i> Кошик (0)</a>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <h3>Фільтри</h3>
+            <div class="filter-group">
+                <label for="category-filter">Категорія:</label>
+                <select id="category-filter">
+                    <option value="">Всі</option>
+                    <option value="Action">Екшн</option>
+                    <option value="Adventure">Пригоди</option>
+                    <option value="RPG">РПГ</option>
+                    <option value="Sports">Спорт</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="platform-filter">Платформа:</label>
+                <select id="platform-filter">
+                    <option value="">Всі</option>
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Switch">Switch</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price-filter">Сортувати за ціною:</label>
+                <select id="price-filter">
+                    <option value="default">За замовчуванням</option>
+                    <option value="lowest">Від дешевих до дорогих</option>
+                    <option value="highest">Від дорогих до дешевих</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="rating-filter">Рейтинг:</label>
+                <select id="rating-filter">
+                    <option value="">Всі</option>
+                    <option value="1">1 Зірка і вище</option>
+                    <option value="2">2 Зірки і вище</option>
+                    <option value="3">3 Зірки і вище</option>
+                    <option value="4">4 Зірки і вище</option>
+                    <option value="5">5 Зірок</option>
+                </select>
+            </div>
+        </aside>
+        <section id="main-content">
+            <!-- Основний контент буде тут -->
+        </section>
+    </main>
+    <div id="cart-panel" class="cart-panel">
+        <h3>Ваш Кошик</h3>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <strong>Загальна сума: ₴<span id="cart-total">0.00</span></strong>
+        </div>
+        <button id="close-cart">Закрити</button>
+        <button id="buy-cart">Купити</button>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Політика конфіденційності</a>
+            <a href="#">Умови обслуговування</a>
+            <a href="#">Політика повернення</a>
+        </div>
+        <div class="social-media">
+            <!-- Іконки соціальних мереж -->
+        </div>
+        <div class="contact-info">
+            <p>Зв'яжіться з нами: email@example.com</p>
+        </div>
+    </footer>
+    <div id="game-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="game-title"></h2>
+            <p id="game-description"></p>
+            <p id="game-price"></p>
+        </div>
+    </div>
+    <div id="registration-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Реєстрація</h2>
+            <form id="registration-form">
+                <label for="username">Ім'я користувача:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Зареєструватися</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
